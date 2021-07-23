@@ -158,7 +158,6 @@
 		17660ED126AA573B000EA824 /* OpaquePointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17660E1D26AA573A000EA824 /* OpaquePointer.swift */; };
 		17660ED226AA573B000EA824 /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17660E1E26AA573A000EA824 /* Float.swift */; };
 		17660ED326AA573B000EA824 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17660E2026AA573A000EA824 /* LaunchScreen.storyboard */; };
-		17660ED426AA573B000EA824 /* VersionUpdater in Resources */ = {isa = PBXBuildFile; fileRef = 17660E2226AA573A000EA824 /* VersionUpdater */; };
 		17660ED526AA573B000EA824 /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17660E2426AA573A000EA824 /* Geometry.swift */; };
 		17660ED626AA573B000EA824 /* GeoPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17660E2526AA573A000EA824 /* GeoPoint.swift */; };
 		17660ED726AA573B000EA824 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17660E2626AA573A000EA824 /* Date.swift */; };
@@ -375,7 +374,7 @@
 		17660E4226AA573A000EA824 /* Sun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sun.swift; sourceTree = "<group>"; };
 		17660E4326AA573A000EA824 /* SolarToday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolarToday.swift; sourceTree = "<group>"; };
 		17660EF326AA5A35000EA824 /* FlatlandMobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = FlatlandMobile.entitlements; path = /Users/Stuart/Documents/GitHub/FlatlandMobile/FlatlandMobile.entitlements; sourceTree = "<absolute>"; };
-		17660EF426AA5BB5000EA824 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = /Users/Stuart/Documents/GitHub/FlatlandMobile/Info.plist; sourceTree = "<absolute>"; };
+		17660EF426AA5BB5000EA824 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		17660EF526AA5DD5000EA824 /* Versioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Versioning.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -927,6 +926,7 @@
 				17660D5126AA5504000EA824 /* Sources */,
 				17660D5226AA5504000EA824 /* Frameworks */,
 				17660D5326AA5504000EA824 /* Resources */,
+				17AC72AC26AA6A6A00C9DA93 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -983,7 +983,6 @@
 				17660E7726AA573B000EA824 /* GeocodingCache.db in Resources */,
 				17660E7526AA573B000EA824 /* Settings.db in Resources */,
 				17660E9C26AA573B000EA824 /* Cymbal.mp3 in Resources */,
-				17660ED426AA573B000EA824 /* VersionUpdater in Resources */,
 				17660D5D26AA5505000EA824 /* Assets.xcassets in Resources */,
 				17660E7826AA573B000EA824 /* MappableS.db in Resources */,
 				17660E9F26AA573B000EA824 /* NHKPips.mp3 in Resources */,
@@ -994,6 +993,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17AC72AC26AA6A6A00C9DA93 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${SRCROOT}/VersionUpdater/VersionUpdater ${SRCROOT}/Versioning.swift ${SRCROOT}/Info.plist\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		17660D5126AA5504000EA824 /* Sources */ = {
@@ -1294,6 +1314,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = FlatlandMobile.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1301,7 +1322,7 @@
 				DEVELOPMENT_TEAM = 4BB235M4GL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FlatlandMobile/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Flatland;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1329,6 +1350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = FlatlandMobile.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1336,7 +1358,7 @@
 				DEVELOPMENT_TEAM = 4BB235M4GL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FlatlandMobile/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Flatland;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
